@@ -1,4 +1,4 @@
-from app import app
+from food_api.app import app
 
 @app.route('/')
 @app.route('/index')
