@@ -1,26 +1,26 @@
 class FoodItem(object):
 
     def __init__(self, description, count):
-        self.count = count
-        self.description = description
+        self._count = count
+        self._description = description
 
     @property
     def count(self):
-        return self.count()
+        return self._count
 
     @count.setter
     def count(self, count):
         if count < 0:
             count = 0
-        self.count = count
+        self._count = count
 
     @property
     def description(self):
-        return self.description
+        return self._description
 
     @description.setter
     def description(self, description):
-        self.description = description
+        self._description = description
 
     def is_depleted(self):
-        return self.count == 0
+        return self._count == 0
